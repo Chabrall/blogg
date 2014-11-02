@@ -4,15 +4,13 @@
 //
 
 // Colors
-$blue: #4183C4; 
-
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+$blue: #4183C4;
+$light-color: #fafafa;
+$text-color: #3a3a3a;
+$light-text: #828282;
+$strong-text: #524E4D;
+$accent-color: #3498DB;
+$light-border: #e3e9e9;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
@@ -24,4 +22,12 @@ $georgia: Georgia, serif;
   @media screen and (max-width: 640px) {
     @content;
   }
+}
+
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}{
+        @content
+      }
+    }
 }
